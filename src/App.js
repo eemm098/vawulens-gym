@@ -1,4 +1,4 @@
-import { BrowserRouter , Routes , Route } from "react-router-dom";
+import { HashRouter , Routes , Route } from "react-router-dom";
 
 import NavBar from './components/NavBar/NavBar'
 import Home from './pages/home/Home'
@@ -14,7 +14,7 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter >
+      <HashRouter >
         <NavBar/>
         <Routes>
           <Route index element={<Home/> } />
@@ -26,7 +26,7 @@ function App() {
           <Route path="*" element={<NotFound/> } />
         </Routes>
         <Footer/>
-    </BrowserRouter>
+    </HashRouter>
     </div>
   );
 }
